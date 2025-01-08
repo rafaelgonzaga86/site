@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Moto - Rafael Motos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Detalhes da Moto</h1>
+    </header>
+
+
+    <a href="index.html" class="return-link">Voltar para a Página Principal</a>
+    
+
+
+    <section class="detalhes">
+        <div class="moto-imagem">
+            <img id="main-image" src="" alt="Imagem Principal da Moto">
+        </div>
+    
+        <div class="miniaturas">
+            <h3>Mais Imagens</h3>
+            <div class="mini-imagens" id="mini-imagens"></div>
+        </div>
+    
+        
+        <!--  descrição moto -->
+        <div id="descricao"></div>
+        
+    </section>
+
+    <section class="localizacao">
+        <h2>Visite-nos</h2>
+        <p>Estamos localizados em <strong>Rua Costa Júnior, 1095, Jacarezinho - PR</strong>.</p>
+        <div class="localizacao-links">
+            <a href="https://maps.app.goo.gl/fuUBfgKBnpnf3Cw5A" target="_blank">
+                Abrir no Google Maps
+            </a> |
+            <a href="https://www.waze.com/en/live-map/directions?latlng=-23.158018331806478%2C-49.972676038742065" target="_blank">
+                Abrir no Waze
+            </a>
+        </div>
+    </section>
+    
+    
+
+     <!-- Botão de WhatsApp -->
+     <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20moto%20que%20vi%20no%20site!" 
+     class="whatsapp-button" target="_blank" aria-label="Entrar em contato pelo WhatsApp">
+      <img src="whatsapp.jpg" alt="WhatsApp">
+  </a>
+
+    <footer>
+        <p>&copy; 2025 Rafael Motos. Todos os direitos reservados.</p>
+    </footer>
+
+
+    
+
+    <script>
+        // Dados das motos
+
+    // Dados das motos
+const motos = {
+    1: {
+        mainImage: "moto1-mini.jpg",
+        miniImages: ["moto1-mini-1.jpg", "moto1-mini-2.jpg", "moto1-mini-3.jpg" , "moto2-mini-1.jpg", "moto2-mini-2.jpg", "moto2-mini-3.jpg", "moto3-mini-3.jpg" , "moto3-mini-2.jpg" , "moto3-mini-3.jpg" ], 
+        descricao: "Descrição: Potente e eficiente, ideal para viagens longas.",
+    },
+    2: {
+        mainImage: "moto2-mini.jpg",
+        miniImages: ["moto2-mini-1.jpg", "moto2-mini-2.jpg", "moto2-mini-3.jpg", "moto2-mini-1.jpg", "moto2-mini-2.jpg", "moto2-mini-3.jpg", "moto3-mini-3.jpg" , "moto3-mini-2.jpg" , "moto3-mini-3.jpg" ], 
+        descricao: "Descrição: Compacta e versátil, perfeita para o uso urbano.",
+    },
+    3: {
+        mainImage: "moto3-mini.jpg",
+        miniImages: ["moto3-mini-1.jpg", "moto3-mini-2.jpg", "moto3-mini-3.jpg", "moto2-mini-1.jpg", "moto2-mini-2.jpg", "moto2-mini-3.jpg", "moto3-mini-3.jpg" , "moto3-mini-2.jpg" , "moto3-mini-3.jpg" ], 
+        descricao: "Descrição: Design moderno com desempenho impressionante.",
+    },
+    4: {
+        mainImage: "moto2-mini.jpg",
+        miniImages: ["moto2-mini-1.jpg", "moto2-mini-2.jpg", "moto2-mini-3.jpg" , "moto2-mini-1.jpg", "moto2-mini-2.jpg", "moto2-mini-3.jpg", "moto3-mini-3.jpg" , "moto3-mini-2.jpg" , "moto3-mini-3.jpg" ], 
+        descricao: "Descrição: Compacta e versátil, perfeita para o uso urbano.",
+    },
+    5: {
+        mainImage: "moto3-mini.jpg",
+        miniImages: ["moto3-mini-1.jpg", "moto3-mini-2.jpg", "moto3-mini-3.jpg" , "moto2-mini-1.jpg", "moto2-mini-2.jpg", "moto2-mini-3.jpg", "moto3-mini-3.jpg" , "moto3-mini-2.jpg" , "moto3-mini-3.jpg" ], 
+        descricao: "Descrição: Design moderno com desempenho impressionante.",
+    },
+    6: {
+        mainImage: "moto1-mini.jpg",
+        miniImages: ["moto1-mini-1.jpg", "moto1-mini-2.jpg", "moto1-mini-3.jpg" , "moto2-mini-1.jpg", "moto2-mini-2.jpg", "moto2-mini-3.jpg", "moto3-mini-3.jpg" , "moto3-mini-2.jpg" , "moto3-mini-3.jpg" ], 
+        descricao: "Descrição: Potente e eficiente, ideal para viagens longas.",
+    },
+    7: {
+        mainImage: "moto2-mini.jpg",
+        miniImages: ["moto2-mini-1.jpg", "moto2-mini-2.jpg", "moto2-mini-3.jpg" , "moto2-mini-1.jpg", "moto2-mini-2.jpg", "moto2-mini-3.jpg", "moto3-mini-3.jpg" , "moto3-mini-2.jpg" , "moto3-mini-3.jpg" ], 
+        descricao: "Descrição: Compacta e versátil, perfeita para o uso urbano.",
+    },
+    8: {
+        mainImage: "moto3-mini.jpg",
+        miniImages: ["moto3-mini-1.jpg", "moto3-mini-2.jpg", "moto3-mini-3.jpg" , "moto2-mini-1.jpg", "moto2-mini-2.jpg", "moto2-mini-3.jpg", "moto3-mini-3.jpg" , "moto3-mini-2.jpg" , "moto3-mini-3.jpg" ], 
+        descricao: "Descrição: Design moderno com desempenho impressionante.",
+    },
+    9: {
+        mainImage: "moto1-mini.jpg",
+        miniImages: ["moto1-mini-1.jpg", "moto1-mini-2.jpg", "moto1-mini-3.jpg" , "moto2-mini-1.jpg", "moto2-mini-2.jpg", "moto2-mini-3.jpg", "moto3-mini-3.jpg" , "moto3-mini-2.jpg" , "moto3-mini-3.jpg" ], 
+        descricao: "Descrição: Potente e eficiente, ideal para viagens longas.",
+    },
+    // Adicione as descrições das outras motos aqui...
+};
+
+// Função para trocar a imagem principal
+function changeImage(image) {
+    document.getElementById("main-image").src = image;
+}
+
+// Captura o parâmetro da URL
+const params = new URLSearchParams(window.location.search);
+const motoId = params.get("moto");
+
+// Captura o elemento de descrição
+const descricaoElemento = document.createElement("p");
+descricaoElemento.id = "descricao-moto";
+
+// Verifica se o ID da moto existe nos dados
+if (motos[motoId]) {
+    const motoData = motos[motoId];
+
+    // Atualiza a imagem principal
+    document.getElementById("main-image").src = motoData.mainImage;
+
+    // Atualiza as miniaturas
+    const miniImagensDiv = document.getElementById("mini-imagens");
+    motoData.miniImages.forEach((image) => {
+        const imgElement = document.createElement("img");
+        imgElement.src = image;
+        imgElement.alt = "Miniatura da Moto";
+        imgElement.onclick = () => changeImage(image); // Atualiza a imagem principal ao clicar
+        imgElement.style.cursor = "pointer";
+        miniImagensDiv.appendChild(imgElement);
+    });
+
+    // Adiciona a descrição
+    descricaoElemento.textContent = motoData.descricao;
+    document.querySelector(".detalhes").appendChild(descricaoElemento);
+} else {
+    // Caso o ID seja inválido, exibe uma mensagem ou redireciona
+    document.body.innerHTML = "<h1>Moto não encontrada</h1>";
+}
+
+
+    </script>
+
+</body>
+</html>

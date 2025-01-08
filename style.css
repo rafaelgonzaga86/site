@@ -1,0 +1,186 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Estilos para as miniaturas */
+
+.moto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.moto-item img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.moto-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para a página de detalhes */
+.detalhes {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.moto-imagem {
+    width: 70%;
+}
+
+.miniaturas {
+    width: 25%;
+}
+
+.mini-imagens img {
+    width: 100%;
+    max-width: 80px; /* Define um tamanho máximo */
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+.mini-imagens img:hover {
+    border-color: #333;
+}
+
+#main-image {
+    width: 100%;
+    height: auto;
+}
+
+#descricao-moto {
+    margin-top: 20px;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #333;
+    max-width: 70%;
+}
+
+/* Botão de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.whatsapp-button img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.whatsapp-button img:hover {
+    transform: scale(1.1);
+}
+
+.return-link {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.return-link:hover {
+    background-color: #555;
+}
+
+.localizacao {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.localizacao h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.localizacao p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.localizacao-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.localizacao-links a:hover {
+    color: #007BFF;
+}
+
+/* Mídia Queries para responsividade */
+@media (max-width: 768px) {
+    .detalhes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .moto-imagem,
+    .miniaturas {
+        width: 100%;
+    }
+
+    #descricao-moto {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .localizacao h2 {
+        font-size: 1.5em;
+    }
+
+    .localizacao p {
+        font-size: 1em;
+    }
+}
